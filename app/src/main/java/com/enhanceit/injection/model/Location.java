@@ -84,4 +84,16 @@ public class Location {
         this.timezone = timezone;
     }
 
+    @Override
+    public String toString() {
+        return "Location{" +
+                "street=" + street +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", country='" + country + '\'' +
+                ", postcode='" + postcode + '\'' +
+                ", coordinates=" + coordinates +
+                ", timezone=" + timezone +
+                '}';
+    }
 }

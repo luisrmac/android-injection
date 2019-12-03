@@ -29,4 +29,11 @@ public class Timezone {
         this.description = description;
     }
 
+    @Override
+    public String toString() {
+        return "Timezone{" +
+                "offset='" + offset + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }

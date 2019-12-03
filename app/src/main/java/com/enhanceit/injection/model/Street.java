@@ -29,4 +29,11 @@ public class Street {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return "Street{" +
+                "number=" + number +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

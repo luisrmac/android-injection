@@ -29,4 +29,11 @@ public class Registered {
         this.age = age;
     }
 
+    @Override
+    public String toString() {
+        return "Registered{" +
+                "date='" + date + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }

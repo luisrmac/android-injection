@@ -30,4 +30,11 @@ public class RandomUser {
         this.info = info;
     }
 
+    @Override
+    public String toString() {
+        return "RandomUser{" +
+                "results=" + results +
+                ", info=" + info +
+                '}';
+    }
 }

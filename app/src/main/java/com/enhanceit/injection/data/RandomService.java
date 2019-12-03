@@ -1,22 +1,19 @@
 package com.enhanceit.injection.data;
 
+import com.enhanceit.injection.di.Injector;
 import com.enhanceit.injection.model.RandomUser;
-import com.enhanceit.injection.network.NetworkManager;
 
 import io.reactivex.SingleObserver;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
-import retrofit2.Retrofit;
 
 public class RandomService {
 
     private RandomAPI randomAPI;
 
-    public RandomService() {
-        NetworkManager networkManager = new NetworkManager();
-        Retrofit retrofit = networkManager.provideRetrofitClient(RandomAPI.BASE_URL);
-        randomAPI = retrofit.create(RandomAPI.class);
+    public RandomService(RandomAPI randomAPI) {
+        this.randomAPI = randomAPI;
     }
 
     public void getRandomUser(final RandomUserCallback callback) {
@@ -41,7 +38,7 @@ public class RandomService {
                 });
     }
 
-    interface RandomUserCallback {
+    public interface RandomUserCallback {
         void onRandomUser(RandomUser user);
         void onError(String error);
     }

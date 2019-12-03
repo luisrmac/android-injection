@@ -29,4 +29,11 @@ public class Dob {
         this.age = age;
     }
 
+    @Override
+    public String toString() {
+        return "Dob{" +
+                "date='" + date + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }

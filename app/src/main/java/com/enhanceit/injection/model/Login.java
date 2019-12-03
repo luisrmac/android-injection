@@ -84,4 +84,16 @@ public class Login {
         this.sha256 = sha256;
     }
 
+    @Override
+    public String toString() {
+        return "Login{" +
+                "uuid='" + uuid + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", salt='" + salt + '\'' +
+                ", md5='" + md5 + '\'' +
+                ", sha1='" + sha1 + '\'' +
+                ", sha256='" + sha256 + '\'' +
+                '}';
+    }
 }

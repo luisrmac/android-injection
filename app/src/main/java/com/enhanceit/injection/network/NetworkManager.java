@@ -33,7 +33,7 @@ public class NetworkManager {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
 
         if(BuildConfig.DEBUG) {
-            interceptor.level(HttpLoggingInterceptor.Level.BODY);
+            interceptor.level(HttpLoggingInterceptor.Level.NONE);
         } else {
             interceptor.level(HttpLoggingInterceptor.Level.NONE);
         }

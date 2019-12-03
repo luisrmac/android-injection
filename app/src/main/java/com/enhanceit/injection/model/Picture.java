@@ -40,4 +40,12 @@ public class Picture {
         this.thumbnail = thumbnail;
     }
 
+    @Override
+    public String toString() {
+        return "Picture{" +
+                "large='" + large + '\'' +
+                ", medium='" + medium + '\'' +
+                ", thumbnail='" + thumbnail + '\'' +
+                '}';
+    }
 }
