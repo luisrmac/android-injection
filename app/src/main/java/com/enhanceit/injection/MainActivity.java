@@ -6,20 +6,25 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.enhanceit.injection.data.RandomService;
-import com.enhanceit.injection.di.Injector;
+import com.enhanceit.injection.di.DaggerActivityComponent;
 import com.enhanceit.injection.model.RandomUser;
+
+import javax.inject.Inject;
 
 public class MainActivity extends AppCompatActivity implements RandomService.RandomUserCallback {
 
     private static final String TAG = "MainActivity_TAG";
 
-    private RandomService service;
+    @Inject
+    RandomService service;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        service = Injector.provideRandomService();
+        DaggerActivityComponent.builder()
+                .build()
+                .inject(this);
         service.getRandomUser(this);
     }
 

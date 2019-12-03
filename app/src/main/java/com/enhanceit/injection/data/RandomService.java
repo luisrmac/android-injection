@@ -1,7 +1,8 @@
 package com.enhanceit.injection.data;
 
-import com.enhanceit.injection.di.Injector;
 import com.enhanceit.injection.model.RandomUser;
+
+import javax.inject.Inject;
 
 import io.reactivex.SingleObserver;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -12,6 +13,7 @@ public class RandomService {
 
     private RandomAPI randomAPI;
 
+    @Inject
     public RandomService(RandomAPI randomAPI) {
         this.randomAPI = randomAPI;
     }

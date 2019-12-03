@@ -10,6 +10,5 @@ public interface RandomAPI {
     @GET("api")
     Single<RandomUser> getRandomUser();
 
-
     String BASE_URL = "https://randomuser.me/";
 }
